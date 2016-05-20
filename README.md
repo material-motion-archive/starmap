@@ -1,6 +1,14 @@
 # Material Motion Starmap
 
-TODO.
+The Material Motion Starmap is a high level outline of long term plans for
+Material Motion over multiple years.
+
+This document is expected to change over time. Please initiate discussions
+about this Starmap by filing an issue on the GitHub repository.
+
+This repository is neither a schedule nor a list of relative priorities. This
+repository is the goal state we want to get to and will help us measure
+success. We will publish Roadmaps for individual projects as they spin up.
 
 ## License
 
