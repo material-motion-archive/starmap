@@ -5,7 +5,7 @@ Material Motion over multiple years.
 
 This document is expected to change over time. Please initiate discussions about
 this Starmap by [filing an issue
-](https://github.com/material-motion/starmap/issues/) on the GitHub repository.
+](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
 This repository is neither a schedule nor a list of relative priorities. This
 repository is the goal state we want to get to and will help us measure success.
