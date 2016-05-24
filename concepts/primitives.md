@@ -31,13 +31,10 @@ dimensions and types of input.
 
 ### Tweens
 
-**What it is**: *interpolated change be**tween** a list of values*.
+**What it is**: *interpolated change between a list of values*.
 
 Tweens have a **starting time** and a **duration**. The start and duration
 properties allow Tweens to be sequenced in relation to other tweens.
-
-Tweens have a **speed**. This speed is a multiplier that affects the rate at
-which the animation progresses through its duration.
 
 Tweens use an **interpolation function**. This is generally a cubic-bezier.
 
