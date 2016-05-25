@@ -28,10 +28,6 @@ heavily upon the experience of shipping production software interfaces.
 Each concept in the Starmap represents a concrete **goal** — a guiding star — to
 guide development.
 
-The Starmap also serves as an index of concept implementations. An ideal
-implementation is one that complements and amplifies the power of a specific
-platform’s toolchain, has minimal dependencies, and is well documented.
-
 ## Table of contents
 
 This repository is organized by the following high-level concepts:
