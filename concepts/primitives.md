@@ -9,7 +9,8 @@ View or a DOM Element.
 
 This section’s topics:
 
-- [Delta Primitives](#delta-primitives).
+- [Delta Primitives](#delta-primitives),
+- the [Timeline](#timeline).
 
 ## Delta Primitives
 
@@ -109,3 +110,34 @@ expression of arbitrary forces.
 | iOS | [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAttachmentBehavior_Class/) · [POP](https://github.com/facebook/pop) | [UIFieldBehavior.dragField](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFieldBehavior_class/) | [UICollisionBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollisionBehavior_Class/) | [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) · [POP](https://github.com/facebook/pop) |
 | Web JavaScript | [Rebound.js](https://github.com/facebook/rebound-js/) | | | |
 | Web React | [React Motion](https://github.com/chenglou/react-motion/) | | | |
+
+## Timeline
+
+**What it is**: *an entity that has a floating point value ranging from 0 to 1 inclusively that can
+be driven by a Delta Primitive and to which Tweens may be associated*.
+
+A Timeline has a **progress** that is a floating point number. The Timeline bounds the progress
+between 0 and 1.
+
+We use “**to drive**” to refer to the idea of *an output from one Primitive being fed into the input
+of another*. This enables the expression of novel interactions such as a Gesture driving a Timeline
+that is driving a collection of Tweens.
+
+#### Primitives driving the progress
+
+The **progress** can be driven by the following Delta Primitives if they have been mapped to the
+[0...1] domain:
+
+- **Time** can move the progress forward or backward.
+- **Gestures** can scrub the progress directly.
+- **Physical simulation**: The progress can be physically anchored to a position, usually 1 or 0,
+  using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
+- **Tweens** can drive the progress.
+
+#### Progress driving Primitives
+
+The progress can drive Tween Primitives. For example: a FadeIn tween animation could occur during
+the first 50% of a timeline.
+
+There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it
+is also not particularly clear what that would mean.
